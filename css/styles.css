@@ -146,12 +146,13 @@ main {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/main-page/bg-hero/img-1.jpg);
+    url(../images/main-page/bg-hero/bg-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   padding: 112px 0;
   margin: 0 auto;
+  max-width: 428px;
 }
 
 @media screen and (min-resolution: 192dpi) {
@@ -161,7 +162,7 @@ main {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/main-page/bg-hero/img-1@x2.jpg);
+      url(../images/main-page/bg-hero/bg-mobile@2x.jpg);
   }
 }
 
@@ -236,9 +237,9 @@ main {
 
 .advantages-title {
   font-style: var(--primary-font-style);
-  font-weight: var(--primary-font-weight);
-  font-size: var(--secondary-font-size);
-  line-height: var(--secondary-line-height);
+  font-weight: 700px;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: var(--primary-letter-spacing);
   color: var(--primary-navy-blue-color);
   text-align: center;
@@ -247,9 +248,9 @@ main {
 
 .advantages-text {
   font-style: var(--primary-font-style);
-  font-weight: var(--secondary-font-weight);
+  font-weight: var(--primary-font-weight);
   font-size: var(--primary-font-size);
-  line-height: var(--primary-line-height);
+  line-height: var(--secondary-line-height);
   letter-spacing: var(--primary-letter-spacing);
   color: var(--primary-slate-color);
 }
@@ -347,12 +348,13 @@ main {
 .customers-list {
   display: inline-flex;
   flex-wrap: wrap;
+  justify-content: center;
   row-gap: 72px;
   column-gap: 16px;
 }
 
 .customers-item {
-  width: calc((100% - 16px) / 2);
+  width: 190px;
   height: 88px;
 }
 
@@ -397,7 +399,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0;
   gap: 72px;
   margin: 0 auto;
 }
@@ -432,7 +433,7 @@ main {
   letter-spacing: var(--primary-letter-spacing);
   color: var(--primary-cloud-color);
   text-align: left;
-  max-width: 268px;
+  width: 268px;
 }
 
 .footer-links {
@@ -486,6 +487,7 @@ main {
 .form-footer-container {
   margin: 0 auto;
   text-align: center;
+  width: 100%;
 }
 
 .form-footer {
@@ -495,6 +497,10 @@ main {
   padding: 0px;
   gap: 16px;
   margin: 0 auto;
+}
+
+.form-label-footer {
+  width: 100%;
 }
 
 .form-input-footer {
@@ -509,7 +515,7 @@ main {
   resize: none;
   border: 1px solid #ffffff;
   border-radius: 4px;
-  width: 320px;
+  width: 100%;
   height: 40px;
   padding: 0 16px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -903,6 +909,7 @@ main {
   padding: 80px 40px 40px;
   z-index: 999;
   transform: translateX(100%);
+  overflow: auto;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: var(--primary-white-color);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
@@ -1017,7 +1024,6 @@ main {
 
 .social-links-menu {
   display: flex;
-  justify-content: center;
   gap: 56px;
 }
 
@@ -1158,8 +1164,8 @@ main {
 
   .contacts-link {
     font-weight: var(--secondary-font-weight);
-    font-size: var(--primary-font-size);
-    line-height: var(--primary-line-height);
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: var(--primary-letter-spacing);
     color: var(--primary-slate-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1168,6 +1174,27 @@ main {
   .contacts-link:hover,
   .contacts-link:focus {
     color: var(--primary-ocean-color);
+  }
+
+  .hero-image {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/main-page/bg-hero/bg-tablet.jpg);
+    max-width: 768px;
+  }
+
+  @media screen and (min-resolution: 192dpi) {
+    .hero-image {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/main-page/bg-hero/bg-tablet@2x.jpg);
+    }
   }
 
   .title {
@@ -1194,6 +1221,10 @@ main {
     width: calc((100% - 24px) / 2);
   }
 
+  .advantages-title {
+    text-align: left;
+  }
+
   .team-list {
     display: flex;
     flex-direction: row;
@@ -1216,7 +1247,7 @@ main {
   }
 
   .customers-item {
-    width: calc((100% - 48px) / 3);
+    width: 168px;
     height: 88px;
   }
 
@@ -1224,19 +1255,20 @@ main {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
     align-items: baseline;
     gap: 0;
   }
 
   .footer-content {
-    margin-left: auto;
+    margin-left: 0;
     margin-right: 24px;
     text-align: left;
   }
 
   .footer-links {
-    margin-right: auto;
     margin-left: 0;
+    margin-right: 0;
     text-align: left;
   }
 
@@ -1245,6 +1277,8 @@ main {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
+    width: 500px;
+    margin: 0;
     margin-top: 72px;
   }
 
@@ -1253,6 +1287,7 @@ main {
     flex-direction: row;
     align-items: flex-start;
     gap: 24px;
+    margin: 0;
   }
 
   .form-input-footer {
@@ -1315,10 +1350,32 @@ main {
     gap: 40px;
   }
 
+  .contacts-link {
+    font-size: var(--primary-font-size);
+    line-height: var(--secondary-line-height);
+  }
+
   .hero-image {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/main-page/bg-hero/bg-desktop.jpg);
     padding: 188px 0;
     border: 1px solid #000000;
     max-width: 1440px;
+  }
+
+  @media screen and (min-resolution: 192dpi) {
+    .hero-image {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/main-page/bg-hero/bg-desktop@2x.jpg);
+    }
   }
 
   .title {
@@ -1352,7 +1409,13 @@ main {
   }
 
   .advantages-title {
-    text-align: left;
+    font-weight: var(--primary-font-weight);
+    font-size: var(--secondary-font-size);
+    line-height: var(--secondary-line-height);
+  }
+
+  .advantages-text {
+    font-weight: var(--secondary-font-weight);
   }
 
   .work {
@@ -1375,6 +1438,7 @@ main {
 
   .team-list {
     display: flex;
+    flex-wrap: nowrap;
     gap: 24px;
   }
 
@@ -1384,6 +1448,7 @@ main {
 
   .customers-list {
     display: flex;
+    flex-wrap: nowrap;
     gap: 24px;
   }
 
@@ -1394,7 +1459,7 @@ main {
 
   .footer-section .container {
     display: flex;
-    align-items: baseline;
+    flex-wrap: nowrap;
   }
 
   .footer-content {
